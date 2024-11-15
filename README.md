@@ -130,5 +130,3 @@ The black dashed line is the neighbor relationship obtained after feature engine
 ### LSTM Result
 ![US101 LSTM](./img/highway_trajectory_visualization.gif)
 
-
-- To avoid code clutter and bugs, we should upload our own branches to GitHub every time. To distinguish our branches, we use our usernames as branch names. After uploading the branch, we check whether our changes will affect other people's code. After checking, merge it into the main branch.
