@@ -5,8 +5,8 @@
 git clone the repo:
 
 ```
-git clone https://github.gatech.edu/24fall-ml-group37/Vehicle-Prediction
-cd Vehicle-Prediction
+git clone https://github.com/Yandong-Luo/Trajectory-Prediction-LSTMs
+cd Trajectory-Prediction-LSTMs
 ```
 
 Create a folder for dataset
