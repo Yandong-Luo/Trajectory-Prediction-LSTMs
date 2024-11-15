@@ -1,0 +1,87 @@
+# Configuration for dataset paths, parameters, and preprocessing options
+
+enable_preprocess: false
+
+enable_visualization: false
+
+enable_LSTM_training: true
+
+enable_lstm_evaluation: false
+
+enable_lstm_visualization: false
+
+dataset_path: '~/hw/cs7641/project/Vehicle-Prediction/dataset'
+
+# Paths for different datasets
+datasets:
+  US101:
+    folder: 'US-101-LosAngeles-CA/us-101-vehicle-trajectory-data/vehicle-trajectory-data'
+    csv_files:
+      time1: '0750am-0805am/trajectories-0750am-0805am.csv'
+      time2: '0805am-0820am/trajectories-0805am-0820am.csv'
+      time3: '0820am-0835am/trajectories-0820am-0835am.csv'
+  I80:
+    folder: 'Lankershim-Boulevard-LosAngeles-CA'
+    csv_file: 'NGSIM__Lankershim_Vehicle_Trajectories.csv'
+  Peachtree:
+    folder: 'Peachtree-Street-Atlanta-GA'
+    csv_file: 'NGSIM_Peachtree_Vehicle_Trajectories.csv'
+
+# Preprocessing options
+preprocessing:
+  clean_data: true
+  drop_columns:
+    - 'Global_X'
+    - 'Global_Y'
+    - 'Total_Frames'
+    - 'Following'
+  US101_extra_columns:
+    - 'O_Zone'
+    - 'D_Zone'
+    - 'Direction'
+    - 'Preceding'
+  I80_lane_filter: [1, 6, 0, 11, 12]
+  Peachtree_lane_filter: [1, 2, 0, 11, 12]
+
+# Visualization options
+visualization:
+  save_as_gif: false
+  gif_path: '/home/chris/hw/cs7641/project/Vehicle-Prediction/img/'
+  gif_filename: 'trajectory_visualization.gif'
+  enable_neighbors: false
+  visual_intersection: false
+  visual_highway: True
+  highway:
+    x_limit: [45, 605]
+    y_limit: [-170, 250]
+    section_limits: [50, 600]
+  intersection:
+    x_limit1: [45, 120]
+    x_limit2: [220, 350]
+    y_limit: [-170, 250]
+    section_limits: [50, 350]
+
+    # intersection 3 and 4
+    # x_limit1: [750, 1400]
+    # x_limit2: [750, 1400]
+    # y_limit: [-170, 250]
+    # section_limits: [750, 1400]
+  frame_range:
+    start: 0
+    end: 300
+
+# Feature processing options
+feature_processing:
+  batch_size: 4000
+  grid_size: 39
+  max_workers: 25
+
+# Output options
+output:
+  save_data: true
+  save_data_for_model: true
+  pickle_output_folder: '/home/chris/hw/cs7641/project/Vehicle-Prediction/pkl_output'
+
+# Prediction Output
+prediction_df_path:
+  US101: '/home/chris/hw/cs7641/project/Vehicle-Prediction/pkl_output/US101_prediction_visual_data.pkl'

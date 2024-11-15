@@ -1,0 +1,15 @@
+dataset/
+pkl_output/
+normal_pkl_output/
+US101_ckpt_output/
+GMM/
+Linear_Regression/
+EDA/
+.idea/
+.DS_Store
+lstm_ckpt_output/peachtree_batch512_encode_32/
+lstm_ckpt_output/peachtree_batch512_encode_128/
+lstm_ckpt_output/peachtree_batch_128/
+lstm_ckpt_output/peachtree_batch_256/
+lstm_ckpt_output/peachtree_batch_512/
+lstm_ckpt_output/peachtree_batch_512_encode_32/

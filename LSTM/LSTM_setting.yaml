@@ -1,0 +1,57 @@
+enable_cuda: true
+combine_us101: false
+combine_all: false
+enable_training: true
+
+
+dataset_path: '/home/chris/hw/cs7641/project/Vehicle-Prediction/pkl_output'
+
+dataset:
+  train:
+    US101:
+      time1_file: 'us101_time1_train_data.pkl'
+      time2_file: 'us101_time2_train_data.pkl'
+      time3_file: 'us101_time3_train_data.pkl'
+      pkl_file: 'us101_train_data.pkl'
+    I80:
+      pkl_file: 'I80_train_data.pkl'
+    peachtree:
+      pkl_file: 'peachtree_train_data.pkl'
+  test:
+    US101:
+      time1_file: 'us101_time1_test_data.pkl'
+      time2_file: 'us101_time2_test_data.pkl'
+      time3_file: 'us101_time3_test_data.pkl'
+      pkl_file: 'us101_test_data.pkl'
+    I80:
+      pkl_file: 'I80_test_data.pkl'
+    peachtree:
+      pkl_file: 'peachtree_test_data.pkl'
+  valid:
+    US101:
+      time1_file: 'us101_time1_valid_data.pkl'
+      time2_file: 'us101_time2_valid_data.pkl'
+      time3_file: 'us101_time3_valid_data.pkl'
+      pkl_file: 'us101_valid_data.pkl'
+    I80:
+      pkl_file: 'I80_valid_data.pkl'
+    peachtree:
+      pkl_file: 'peachtree_valid_data.pkl'
+
+saved_ckpt_path: '/home/chris/hw/cs7641/project/Vehicle-Prediction/lstm_ckpt_output'
+
+
+predict_step: 10
+history_step: 10
+grid_size: (13,3)
+encode_size: 128
+input_embedding_size: 32 
+output_size: 10
+decode_size: 128
+trainEpochs: 10
+
+learning_rate: 0.0025
+
+# freq_val: 100
+
+batch_size: 516
