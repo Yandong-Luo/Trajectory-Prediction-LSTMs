@@ -60,13 +60,7 @@ python main.py --dataset="your dataset path"
 │   ├── Lankershim-Boulevard-LosAngeles-CA: I80 dataset
 │   ├── Peachtree-Street-Atlanta-GA: Peachtree dataset
 │   ├── US-101-LosAngeles-CA: US101 dataset
-├── EDA
-│   └── EDA.ipynb: The implement of data analysis
-├── GMM
-│   └── gmm.ipynb: The implement of GMM
 ├── img: Store images
-├── Linear_Regression
-│   └── LinearRegression.ipynb: The implement of linear regression
 ├── LSTM
 │   ├── evaluate.py: The evalution of LSTM
 │   ├── LSTM_setting.yaml: The parameter setting for LSTM
@@ -136,19 +130,5 @@ The black dashed line is the neighbor relationship obtained after feature engine
 ### LSTM Result
 ![US101 LSTM](./img/highway_trajectory_visualization.gif)
 
-### Run
-
-#### LSTM
-Refer to `LSTM` folder
-
-#### Linear Regression
-Refer to `Linear_Regression/LinearRegression.ipynb`
-
-#### GMM
-Refer to `GMM/gmm.ipynb`
-
-### Submission Specifications
-
-- To indicate the content of each modification, please complete the content in CHANGELOG.md before each submission.
 
 - To avoid code clutter and bugs, we should upload our own branches to GitHub every time. To distinguish our branches, we use our usernames as branch names. After uploading the branch, we check whether our changes will affect other people's code. After checking, merge it into the main branch.
